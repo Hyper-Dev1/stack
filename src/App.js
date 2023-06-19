@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import { useState } from "react";
+// import Phonebook from "./components/Phonebook";
 
-function App() {
+const App = (props) => {
+  const tutor = [{ title: "part0", courses: [{ Title: "def", Hour: 2 }] }];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {tutor[0].title}
+    <ul>
+      <li>{tutor[0].courses[0].Title}</li>
+    </ul>
+    </>
   );
-}
+};
 
 export default App;
